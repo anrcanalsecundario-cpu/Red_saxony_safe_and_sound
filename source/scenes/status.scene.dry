@@ -90,7 +90,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the SPD
 
-{!<span class="tooltip-text" title="The National-Revolutionaries are interested in proletarian nationalism, transformative policies and no cooperation with any other parties.">National_Revolutionaries</span>!} strength: [+ National_Revolutionaries_strength : strength +], dissent: [+ left_dissent : dissent +]
+{!<span class="tooltip-text" title="The National Revolutionaries are interested in proletarian nationalism, transformative policies and no cooperation with any other parties.">National_Revolutionaries</span>!} strength: [+ National_Revolutionaries_strength : strength +], dissent: [+ left_dissent : dissent +]
 
 {!<span class="tooltip-text" title="The Center is a faction of that supports both active participation in goverment and nationalism.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
