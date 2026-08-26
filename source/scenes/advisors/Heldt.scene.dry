@@ -11,7 +11,7 @@ view-if: Heldt_advisor = 1
 Heldt is  [? if chancellor != "Heldt": the former ?] Minister President, and is one of the members of the 23.
 
 - @coalition
-- @campaigning_nationalists
+- @campaigning
 - @party_discipline
 - @root: Return to main
 
@@ -25,7 +25,7 @@ on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_governmen
 We have improved our relations with the WP, [+ ddp_name +], and DVP, and reduced tensions with the coalition.
 
 
- @campaigning_nationalists
+ @campaigning
 title: Campaigning amongst the <span style="color: #3E88B3;">nationalists</span>.
 subtitle: Heldt is a supporter of <span style="color: #3E88B3;">nationalism</span>, even if oportunistically.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
