@@ -28,7 +28,7 @@ We have improved our relations with the WP, [+ ddp_name +], and DVP, and reduced
 @Campaigning
 title: Nationalist campaigning
 subtitle: Heldt is a supporter of nationalism, even if oportunistically.
-unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_toleration: The SPD is not in toleration. ?]
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if:advisor_action_timer = 0
 on-arrival: Q.nationalism + 2 =; old_middle_aspd += 3*(1 - dissent); National_revolutionary_dissent -= 5; national_revolutionary_strenght += 5; [? if proletarian_conciousness = 1: workers_aspd += 2*(1 - dissent) ?]
 We ramp up nationalist campaigning, the middle classes [? if proletarian_conciousness = 1: and the workers ?]. are receptive to our party
