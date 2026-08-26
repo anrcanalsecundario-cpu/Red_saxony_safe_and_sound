@@ -25,13 +25,12 @@ on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_governmen
 We have improved our relations with the WP, [+ ddp_name +], and DVP, and reduced tensions with the coalition.
 
 
-@Campaigning
-title: Nationalist campaigning
-subtitle: Heldt is a supporter of nationalism, even if oportunistically.
+ @campaigning_nationalists
+title: Campaigning amongst the <span style="color: #3E88B3;">nationalists</span>.
+subtitle: Heldt is a supporter of <span style="color: #3E88B3;">nationalism</span>, even if oportunistically.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
 choose-if:advisor_action_timer = 0
-on-arrival: Q.nationalism + 2 =; old_middle_aspd += 3*(1 - dissent); National_revolutionary_dissent -= 5; national_revolutionary_strenght += 5; [? if proletarian_conciousness = 1: workers_aspd += 2*(1 - dissent) ?]
-We ramp up nationalist campaigning, the middle classes [? if proletarian_conciousness = 1: and the workers ?]. are receptive to our party
+on-arrival: Q.nationalism += 2; old_middle_aspd += 3*(1 - dissent); national_revolutionary_dissent -= 5; national_revolutionary_strength += 5; if proletarian_conciousness = 1: workers_aspd += 2*(1 - dissent);
 
 @party_discipline
 title: Party Discipline
