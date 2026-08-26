@@ -11,7 +11,7 @@ view-if: Heldt_advisor = 1
 Heldt is  [? if chancellor != "Heldt": the former ?] Minister President, and is one of the members of the 23.
 
 - @coalition
-- @Campaigning
+- @campaigning_nationalists
 - @party_discipline
 - @root: Return to main
 
