@@ -1,44 +1,44 @@
-title: Hermann Müller
+title: Max Heldt
 is-pinned-card: true 
 tags: advisor, centrist
-card-image: img/portraits/MüllerHermann.jpg
+card-image: img/portraits/HeldtMax.jpg
 new-page: true
-view-if: muller_advisor = 1
+view-if: Heldt_advisor = 1
 
-= Herman Müller
+= Max Heldt
 
 
-Müller is a former [? if chancellor = "Müller": and current ?] Chancellor, and is a long-time Social Democratic leader.
+Heldt is  [? if chancellor != "Heldt": the former ?] Minister President, and is one of the members of the 23.
 
 - @coalition
-- @toleration
-- @snap_election
+- @Campaigning
+- @party_discipline
 - @root: Return to main
 
 @coalition
 title: Negotiating with the Coalition
-subtitle: Müller can improve our relationships with our coalition partners.
-choose-if: advisor_action_timer <= 0 and spd_in_government = 1
+subtitle: Heldt can improve our relationships with our coalition partners.
+choose-if: advisor_action_timer <= 0 and aspd_in_government = 1
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_in_government: The SPD is not in government. ?]
 on-arrival: advisor_action_timer = 6; coalition_dissent -= 1 if spd_in_government = 1 and coalition_dissent > 0; z_relation += 5; ddp_relation += 5; dvp_relation += 5
 
-We have improved our relations with the Z, [+ ddp_name +], and DVP, and reduced tensions with the coalition.
+We have improved our relations with the WP, [+ ddp_name +], and DVP, and reduced tensions with the coalition.
 
 
-@toleration
-title: Defending Toleration
-subtitle: Müller supports the toleration arrangement with the bourgeois parties.
+@Campaigning
+title: Nationalist campaigning
+subtitle: Heldt is a supporter of nationalism, even if oportunistically.
 unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?][? if not spd_toleration: The SPD is not in toleration. ?]
-choose-if: spd_in_government = 0 and spd_toleration = 1 and advisor_action_timer = 0
-on-arrival: advisor_action_timer = 6; left_dissent -= 8; neorevisionist_dissent -= 8; center_dissent -= 5;
+choose-if:advisor_action_timer = 0
+on-arrival: Q.nationalism + 2 =; old_middle_aspd += 3*(1 - dissent); National_revolutionary_dissent -= 5; national_revolutionary_strenght += 5; [? if proletarian_conciousness = 1: workers_aspd += 2*(1 - dissent) ?]
+We ramp up nationalist campaigning, the middle classes [? if proletarian_conciousness = 1: and the workers ?]. are receptive to our party
 
-We have reduced dissent among the anti-toleration factions. 
+@party_discipline
+title: Party Discipline
+subtitle: Reduce dissent across the party.
+choose-if: advisor_action_timer = 0
+unavailable-subtitle: [? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
+on-arrival: advisor_action_timer = 6; National_revolutionary_dissent -= 5; Coalitionist_dissent -= 5; center_dissent -= 10; reformist_dissent -= 10;
 
-@snap_election
-title: Snap Election
-subtitle: Call a snap election.
-unavailable-subtitle: [? if chancellor != "Müller" : Müller must be Chancellor. ?][? if advisor_action_timer > 0 : [+ advisor_action_timer +] months before next advisor action. ?]
-choose-if: advisor_action_timer == 0 and chancellor == "Müller"
-on-arrival: advisor_action_timer = 6; next_election_time = time + 3 if next_election_time > time+3; next_election_month = month + 3 if next_election_time >= time+3; next_election_year = year if next_election_time >= time+3; next_election_year += 1 if next_election_month > 12; next_election_month -= 12 if next_election_month > 12;
+We have enforced party discipline to reduce dissent across all factions.
 
-We have called for new elections, set for [+ next_election_month : month +] [+ next_election_year +].
