@@ -22,7 +22,7 @@ Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
 Q.year = 1926;
-Q.month = 1;
+Q.month = 4;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -63,22 +63,25 @@ Q.Coalitionist_split = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 50;
-Q.kpd_relation = 25;
+Q.spd_relation = 20
+Q.CVP_relation = 50;
+Q.kpd_relation = 0;
 Q.ddp_relation = 60;
-Q.dvp_relation = 35;
-// DNVP and NSDAP are invariably hostile
-Q.DNVP_relation = 10;
-Q.NSDAP_relation = 0;
+Q.dvp_relation = 60;
+// KPD always hostile
+Q.DNVP_relation = 45;
+Q.NSDAP_relation = 35;
+Q.WP_relation = 55;
+Q.VRP_relation = 55;
 
-Q.kpd_leader = "Thälmann";
-// alternative is the Conciliators as party leader
+Q.spd_party_leader = "Böchel";
 Q.kpd_party_leader = "Thälmann";
-Q.z_leader = "Brüning";
-// party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
-Q.z_party_leader = "Marx";
-Q.nsdap_leader = "Hitler";
-
+Q.nsdap_party_leader = "Mutschmann";
+Q.DDP_party_dealer = "Külz";
+Q.DVP_party_dealer = "Blüher";
+Q.DNVP_party_dealer = "Hofmann";
+Q.WP_party_dealer = "Kaiser";
+Q.VRP_party_dealer = "Mack";
 // hmm... maybe we can play nice with Hindenburg???
 Q.hindenburg_relation = 25;
 // whether or not hindenburg can dismiss the government.
